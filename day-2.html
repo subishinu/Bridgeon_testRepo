@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-2</title>
+    <style>
+        p
+        {
+            background-color : rgb(183, 153, 215);
+            padding: 25px;
+        }
+    </style>
+    <p id="str_para"></p>
+    <button onclick="strcheck()">Check strings</button>
+    <p id="rep_para"></p>
+    <button onclick="replacestr()">Replace the Name</button>
+    <p id="split_para"></p>
+    <button onclick="splitstr()">Get Name</button>
+    <p id="demo"></p>
+    <button onclick="match_str()">matchAll</button>
+    <p id="var_name"></p>
+    <button onclick="var_str()">Get variables</button>
+    <p id="exprn"></p>
+    <button onclick="exprn_template()">Expression Templates</button>
+    <p id="list_arr"></p>
+    <button onclick="fn_arr()">List Array items</button>
+    <p id="person"></p>
+    <button onclick="Obj_creation()">Personal Details</button>
+    <p id="type_conv" style="font-family:courier;background-color: aquamarine;padding:20px;"></p>
+
+</head>
+<body>
+    <script>
+        //String functions 
+
+        let str1="Good morning";
+        let str2="Good morning";
+        let msg="Welcome Jojo";
+        document.getElementById("rep_para").innerHTML=msg;
+        let status=false;
+        function strcheck()
+        {
+            status=(str1===str2)
+            if (status==true)
+            document.getElementById("str_para").innerText="These two types of strings are not same"
+        
+        }
+        function replacestr()
+        {
+            document.getElementById("rep_para").innerHTML=msg.replace("Jojo","Shinu");
+        }
+        function splitstr()
+        {
+            let msg_arr = document.getElementById("rep_para").innerHTML.split(" ");
+            document.getElementById("split_para").innerHTML=msg_arr[1];
+        }
+        function match_str()
+        {
+            let text = "I love cats. Cats are very easy to love. Cats are very popular."
+            const iterator = text.matchAll("Cats");
+            document.getElementById("demo").innerHTML = Array.from(iterator);
+        }
+        function var_str()
+        {
+            let firstName = "Subitha";
+            let lastName = "Kunnath";
+            let text = `Welcome ${firstName}, ${lastName}!`;
+            document.getElementById("var_name").innerHTML = text;
+        }
+        function exprn_template()
+        {
+            let price = 10;
+            let VAT = 0.25;
+            let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+            document.getElementById("exprn").innerHTML = total;
+        }
+        
+        //Arrays
+        function fn_arr()
+        {
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            let fLen = fruits.length;
+            let text = "<ul>";
+            for (let i = 0; i < fLen; i++) 
+            {
+                text += "<li>" + fruits[i] + "</li>";
+            }
+            text += "</ul>";
+            document.getElementById("list_arr").innerHTML = text;
+        }
+
+        //Objects
+        // Constructor Function for Person objects
+        function Obj_creation()
+        {
+            function Person(first, last, age, eye) 
+            {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }   
+
+            // Create a Person object
+            const myFather = new Person("John", "Doe", 50, "blue");
+
+            // Display age
+            document.getElementById("person").innerHTML =
+            "My father is " + myFather.age + "."; 
+        }
+        var x = NaN;
+        document.getElementById("type_conv").innerHTML =
+        "Number : " + Number(x) + "<br>" +
+        "String : " + String(x) + "<br>" +
+        "Boolean: " + Boolean(x);
+
+       
+    </script>
+</body>
+</html>

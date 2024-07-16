@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p
+        {
+         background-color: aqua;
+         width:fit-content;
+         padding: 25px;
+         border: 2px solid rgb(246, 9, 238);
+         border-radius: 30px;
+        }
+    </style>
+    <!-- <p id="para_for"></p>
+    <p id="para_while"></p>
+    <p id="para_do_while"></p>
+    <p id="para_per"></p>
+    <p id="para_forin"></p> -->
+    <p id="para"></p>
+</head>
+<body>
+<script>
+// //for loop demo
+// const cars = ["BMW", "Volvo", "Saab", "Ford"];
+// let i = 0;
+// let text = "";
+// for (;cars[i];) 
+// {
+//   text += cars[i] + "<br>";
+//   i++;
+// }
+// document.getElementById("para_for").innerHTML=text;
+
+// //while loop
+// let txt = "";
+// let t= 0;
+// while (t < 10) 
+// {
+//   txt += "The number is " + t +"<br>";
+//   t++;
+// }
+// document.getElementById("para_while").innerHTML = txt;
+
+// //do-while loop
+// let txt_dw = "";
+// let j = 0;
+// while (j < 10) {
+//   txt_dw += "<br>The number is " + j;
+//   j++;
+// }
+// document.getElementById("para_do_while").innerHTML = txt_dw;
+
+////for-in loop
+// const person = {fname:"John", lname:"Doe", age:25}; 
+
+// let obj_person = "";
+// for (let x in person) 
+// {
+//   obj_person += person[x] + " ";
+// }
+
+// document.getElementById("para_per").innerHTML = obj_person;
+
+
+// //for -in over arrays
+
+// const numbers = [45, 4, 9, 16, 25];
+// let num = "";
+// for (let x in numbers) {
+//   num += numbers[x] + "<br>"; 
+// }
+// document.getElementById("para_forin").innerHTML = num;
+
+// //array.forEach() function 
+
+// const numbers = [45, 4, 9, 16, 25];
+// let txt = "";
+// numbers.forEach(myFunction);
+// document.getElementById("para").innerHTML = txt;
+
+// function myFunction(value) // or function myFunction(value, index, array) 
+// {
+//   txt += value + "<br>"; 
+// }
+
+// //The JavaScript "for of" statement loops through the values of an iterable object.
+// //for of over arrays
+// const cars = ["BMW", "Volvo", "Mini", "Tata"];
+
+// let text = "";
+// for (let x of cars) {
+//   text += x + "<br>";
+// }
+
+// document.getElementById("para").innerHTML = text;
+
+//for of over string
+let language = "JavaScript";
+let text = "";
+for (let x of language) 
+{
+  text += x + "--";
+}
+
+document.getElementById("para").innerHTML = text;
+
+
+</script>
+</body>
+</html>

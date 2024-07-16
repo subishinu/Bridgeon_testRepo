@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p#demo:hover
+{
+ color:rgb(7, 32, 254);
+}
+p
+{
+  background-color:rgb(182, 133, 171);
+  padding:20px;
+}
+</style>
+<script>
+
+function myFunctionhd() {
+  document.getElementById("demohd").innerHTML = "Paragraph changed(head).";
+}
+</script>
+</head>
+
+<body>
+
+<h2 id='demo' style="display:none">This is a hidden content</h2>
+
+<p id="demo">Place mouse over me !!! I will change my color </p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Show Me!</button>
+
+</br>
+
+<p id="txtsize">Changing my Size</p>
+
+<button type="button" onclick="document.getElementById('txtsize').style.fontSize='35px'">Make me bigger!</button>
+<button type="button" onclick="document.getElementById('txtsize').style.fontSize='15px'">Make me Smaller!</button>
+</br>
+</br>
+
+<!--Changing HTML Attribute Values-->
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+<!--scripting starts here, scripts can be specified either in head or in body section-->
+
+<!--Java script in head-->
+
+<h2>Demo JavaScript in Head</h2>
+
+<p id="demohd">A Paragraph.</p>
+
+<button type="button" onclick="myFunctionhd()">Try it(head)</button>
+
+<!--Java script in body-->
+
+<h2>Demo JavaScript in Body</h2>
+
+<p id="demobody">A Paragraph(body)</p>
+
+<button type="button" onclick="myFunctionbody()">Try it(body)</button>
+
+<script>
+function myFunctionbody() {
+  document.getElementById("demobody").innerHTML = "Paragraph changed(body).";
+}
+</script>
+</br>
+<p id="exdemo">External js functionality</p>
+<button type="button" onclick="ExFun()">External js</button>
+<script src="myScript.js"></script>
+</br>
+</br>
+<!--Output in javascript-->
+<!--using inner html-->
+<!--using document.write(only be used for testing)-->
+<script>document.write(5 + 6);
+</script> 
+
+<!--using window.alert or simply alert-->
+<script>
+  alert("Hello this is just for testing");
+  </script>
+
+  <!--using console.log-->
+  <h2>Activate Debugging</h2>
+
+  <p>F12 on your keyboard will activate debugging.</p>
+  <p>Then select "Console" in the debugger menu.</p>
+  <p>Then click Run again.</p>
+  
+  <script>
+  console.log(5 + 6);
+  </script>
+
+  <!--javascript print-->
+
+<h2>The window.print() Method</h2>
+<p>Click the button to print the current page.</p>
+<button onclick="window.print()">Print this page</button>
+
+  
+
+</body>
+</html> 

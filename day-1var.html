@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    p{
+        background-color : rgb(156, 156, 227);
+        
+        padding: 10px;
+        position: relative;
+    }
+    </style>
+</head>
+<body>
+    <p id="var_new"></p>
+    <p id="var_arr"></p>
+    <p id="dt1"></p>
+    <p id="dt2" style="background-color: aqua;"></p>
+
+    <script>
+       let owner="John Loyal", car_name="Volvo";
+        document.getElementById("var_new").innerHTML="My car: "+car_name;
+        //You cannot re-declare a variable declared with let or const.
+
+//Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library.
+
+//In the JavaScript library jQuery, for instance, the main function $ is used to select HTML elements. In jQuery $("p"); means "select all p elements".
+
+//Using the underscore is not very common in JavaScript, but a convention among professional programmers is to use it as an alias for "private (hidden)" variables.
+
+//Let------Variables declared with let have Block Scope
+
+       //Variables declared with let must be Declared before use
+
+       //Variables declared with let cannot be Redeclared in the same scope
+
+
+       //const 
+       // Create an Array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Change an element:
+cars[0] = "Toyota";
+
+// Add an element:
+cars.push("Audi");
+
+// Display the Array:
+document.getElementById("var_arr").innerHTML = cars; 
+
+//datatypes
+let x = 16 + 4 + "Volvo";
+document.getElementById("dt1").innerHTML = x;
+
+let y = "Volvo" + 16 + 4;
+document.getElementById("dt2").innerHTML = y;
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p#str
+        {
+         background-color: aqua;
+         width:fit-content;
+         padding: 25px;
+        }
+    </style>
+    <p id="str_demo"></p>
+    <p id="str">Please visit Microsoft and Microsoft</p>
+    <button onclick="myFunction()">Replace</button>
+</head>
+<body>
+    <script>
+    // // string.at()
+    //    const name = "W3Schools";
+    //    let letter = name.at(-2);
+    // // instead of writing -->   let nm = name.charAt(name.length-2);
+    //    document.getElementById("str_demo").innerHTML = nm+ " is the -2th letter in "+name;
+
+    // //string.slice()
+    // let text = "This is an interesting game to be part of this string journey.";
+    // let part = text.slice(-27); // 13 not included 
+    // document.getElementById("str_demo").innerHTML = part; 
+
+    // //substring()
+    // let str = "This is an interesting game to be part of this string journey.";
+    // let sub = str.substring(-4,30); //minus values are treated as zero
+    // document.getElementById("str_demo").innerHTML=sub;
+
+    // //string.substr() : 2nd parameter-->length of the string
+    // let str = "This is an interesting game to be part of this string journey.";
+    // sub = str.substr(-20,10); // If the first parameter is negative, the position counts from the end of the string. 
+    // document.getElementById("str_demo").innerHTML=sub;
+
+    // //padding Start-End
+    // let text = 5;
+    // text1 = text.toString().padStart(4,"0");
+    // text2 = text.toString().padEnd(7,"x");
+    // document.getElementById("str_demo").innerHTML = "Start padding :- "+text1+"<br>End padding :- "+text2;
+   
+   
+    function myFunction() // function to replace a word--> string.replace(given str,str to be replaced)
+    {
+      let text = document.getElementById("str").innerHTML; 
+      document.getElementById("str").innerHTML =
+      text.replace(/MicRosoft/gi,"W3Schools");   //--(/MICROSOFT/i) for making it incasesensitive
+    }
+    
+    //split string
+    let str_arr = "abc,def";
+    const myArray = str_arr.split(",");
+    document.getElementById("str_demo").innerHTML = myArray[0];
+
+</script>
+</body>
+</html>
